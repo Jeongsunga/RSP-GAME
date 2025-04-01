@@ -32,6 +32,8 @@ function App() {
   const [userScore, setUserScore] = useState(0);
   const [computerScore, setComputerScore] = useState(0);
   const [click, setClick] = useState(false);
+  const [isEnded, setIsEnded] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const play = (userChoice) => {
 
@@ -71,6 +73,11 @@ function App() {
     }
   }, [click]);
 
+  const end = () => {
+    setIsEnded(prev => !prev)
+    setIsDisabled(prev => !prev)
+  }
+
   return (
     <div>
       <div className='main'>
@@ -78,9 +85,14 @@ function App() {
         <Box title='Computer' item={computerSelect} result={result} score={computerScore}/>
       </div>
       <div className='main'>
-        <button className='user-button' onClick={() => play("scissors")}>가위</button>
-        <button className='user-button' onClick={() => play("rock")}>바위</button>
-        <button className='user-button' onClick={() => play("paper")}>보</button>
+        <button className='user-button' disabled={isDisabled} onClick={() => play("scissors")}>가위</button>
+        <button className='user-button' disabled={isDisabled} onClick={() => play("rock")}>바위</button>
+        <button className='user-button' disabled={isDisabled} onClick={() => play("paper")}>보</button>
+        {!isEnded ? (
+          <button className='end-button' onClick={() => end()}>종료</button>
+        ) : (
+          <button className='resume-button' onClick={() => end()}>재개</button>
+        )}
       </div>
     </div>
   );
