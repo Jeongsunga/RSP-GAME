@@ -1,6 +1,6 @@
 import './App.css';
 import Box from './component/Box';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 // 1. 박스 2개 (타이틀, 사진, 결과)
 // 2. 가위 바위 보 버튼
@@ -28,11 +28,19 @@ function App() {
 
   const [userSelect, setUserSelect] = useState(null);
   const [computerSelect, setComputerSelect] = useState(null);
+  const [result, setResult] = useState("");
+  const [userScore, setUserScore] = useState(0);
+  const [computerScore, setComputerScore] = useState(0);
+  const [click, setClick] = useState(false);
 
   const play = (userChoice) => {
+
     setUserSelect(choice[userChoice]);
     let computerChoice = randomChoice();
     setComputerSelect(computerChoice);
+    setResult(judgement(choice[userChoice], computerChoice));
+    setClick(prev => !prev)
+
   }
 
   const randomChoice = () => {
@@ -44,16 +52,35 @@ function App() {
 
   }
 
+  const judgement = (user, computer) => {
+
+    if(user.name === computer.name) {
+      return "tie"
+    } else if(user.name === "Rock") 
+        return computer.name === "Scissors" ? "win" : "lose"
+      else if(user.name === "Scissors")
+        return computer.name === "Paper" ? "win" : "lose"
+      else if(user.name === "Paper")
+        return computer.name === "Rock" ? "win" :"lose"
+  }
+  
+  useEffect(() => {
+    if (result) {
+      result === "win" && setUserScore(prev => prev + 1);
+      result === "lose" && setComputerScore(prev => prev + 1);
+    }
+  }, [click]);
+
   return (
     <div>
       <div className='main'>
-        <Box title='You' item={userSelect}/>
-        <Box title='Computer' item={computerSelect}/>
+        <Box title='You' item={userSelect} result={result} score={userScore}/>
+        <Box title='Computer' item={computerSelect} result={result} score={computerScore}/>
       </div>
       <div className='main'>
-        <button onClick={() => play("scissors")}>가위</button>
-        <button onClick={() => play("rock")}>바위</button>
-        <button onClick={() => play("paper")}>보</button>
+        <button className='user-button' onClick={() => play("scissors")}>가위</button>
+        <button className='user-button' onClick={() => play("rock")}>바위</button>
+        <button className='user-button' onClick={() => play("paper")}>보</button>
       </div>
     </div>
   );
