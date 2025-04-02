@@ -1,11 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .box {
-    width: 500px;
+    width: 90vw;
+    max-width: 500px;
+    height: 80vh;
     border: 10px solid black;
 }
 
 .item-img {
     width: 400px;
-    height: 400px;
+    height: 350px;
 }
 
 .main {
