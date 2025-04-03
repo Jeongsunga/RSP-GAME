@@ -15,7 +15,9 @@ https://rsp-game-ruby.vercel.app
 
 ### 시작 화면
 <img width="1064" alt="Image" src="https://github.com/user-attachments/assets/87952903-78de-42c5-b73f-f9d294ad7631" />
+
 ### 가위바위보 버튼 클릭 시 화면
 <img width="1073" alt="Image" src="https://github.com/user-attachments/assets/fe9891aa-8c11-4684-b8f0-e62e71fe8d86" />
+
 ### 종료 버튼 클릭 시 화면
 <img width="1067" alt="Image" src="https://github.com/user-attachments/assets/8ce29313-c430-4714-99fd-66fddec2f058" />
