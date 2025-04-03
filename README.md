@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+https://rsp-game-ruby.vercel.app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 유저 스토리
+1. 유저는 박스 두 개를 볼 수 있다. (타이틀, 사진, 결과)</br>
+2. 유저는 박스 하단에 가위바위보 버튼을 볼 수 있다.</br>
+3. 버튼을 클릭하면 클릭한 아이템이 유저 박스에 보인다.</br>
+4. 버튼을 클릭하면 컴퓨터 아이템은 랜덤하게 선택된다.</br>
+5. 3번 4번 아이템을 가지고 누가 이겼는지 승패를 나눈다.</br>
+6. 박스 테두리가 결과에 따라 색이 변한다.</br>
+   지면 빨간색, 이기면 초록색, 비기면 검정색이 보인다.</br>
+### 추가 구현 기능
+1. 컴퓨터와 유저의 스코어를 세고 보여준다.</br>
+2. 종료 버튼을 클릭 시 가위바위보 버튼은 비활성화되고 재개 버튼으로 변경된다.</br>
+3. 재개 버튼 클릭 시 위의 기능이 다시 실행된다.</br>
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 시작 화면
+<img width="1064" alt="Image" src="https://github.com/user-attachments/assets/87952903-78de-42c5-b73f-f9d294ad7631" />
+### 가위바위보 버튼 클릭 시 화면
+<img width="1073" alt="Image" src="https://github.com/user-attachments/assets/fe9891aa-8c11-4684-b8f0-e62e71fe8d86" />
+### 종료 버튼 클릭 시 화면
+<img width="1067" alt="Image" src="https://github.com/user-attachments/assets/8ce29313-c430-4714-99fd-66fddec2f058" />
